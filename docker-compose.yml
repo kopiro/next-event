@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  app:
+    image: kopiro/next-event
+    build: .
+    env_file: .env
+    ports:
+      - 8080:8080
+    volumes:
+      - ./src:/app/src
+      - ./tokens:/app/tokens
